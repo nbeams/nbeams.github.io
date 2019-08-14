@@ -1,2 +1,3 @@
 # nbeams.github.io
-N. Beams website
+N. Beams website files
+visit site: nbeams.github.io
