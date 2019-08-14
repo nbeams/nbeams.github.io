@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>
+     Natalie N. Beams: Research
+    </title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+ 
+  <body role="document">
+
+    <!-- Fixed navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<div class="container">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Research<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+       <a href="files/BeamsNatalieWeb.pdf" <button type="button" class="btn btn-outline-secondary">CV</button></a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      Natalie N. Beams
+    </span>
+</div>
+</nav>
+
+
+    <div class="container theme-showcase mt-5" role="main">
+
+    <div class="container mt-5">
+     <div class="row">
+        <div class="col-md-7 mt-4">
+          <h5><div class="alert alert-secondary" role="alert">HPC for HPS</div></h5>
+            <p> Current work with my postdoc advisor, Adrianna Gillman.</p>
+            <p> The Hierarchical Poincar&eacute;-Steklov (HPS) method is a 
+                 discretization technique based on domain decomposition 
+                 and classical spectral collocation methods.  It is accurate
+                 and robust, even for highly oscillatory solutions. An associated
+                 fast direct solver is built from hierarchically merging Poincar&eacute;-Steklov
+                 operators on box boundaries and storing the necessary information; the solve stage then involves
+                 applying the operators  in a series of small matrix-vector multiplications.</p>
+           <p> We are working on parallelizing, optimizing, and accelerating the algorithm, especially the build stage.
+                This will be crucial in 3D.  Our 2D shared memory parallelization technique has already reduced the build stage times from 
+                 approximately 10 minutes to approximately 30 seconds for over 3 million unknowns. </p>
+        </div>
+         <div class="col-md-4 mt-4">
+          <figure class="figure">
+          <img src="files/speedup56.png" class="figure-img img-fluid rounded" alt="Speedup.">
+          <figcaption class="figure-caption">Speedup achieved in the build and solve portions of the algorithm with 56 available threads.</figcaption>
+          </figure>
+         </div> 
+       </div>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>  
+             <i>An Efficient and High Order Accurate Solution Technique for Three Dimensional Elliptic Partial Differential Equations</i>,
+             <b>NNB</b> and A. Gillman. SIAM Conference on Computational Science and Engineering, Spokane, WA, USA (2019).</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>  
+              <i>A parallel implementation of a high order accurate solution technique for variable coefficient Helmholtz problems</i>,
+              <b>NNB</b>, A. Gillman, and R. Hewett. Submitted to Computers and Mathematics with Applications (2018).&nbsp&nbsp[<a href="https://arxiv.org/abs/1812.07167">arXiv link</a>]</li> 
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>  
+             <i> A Parallel Implementation of a Hierarchical Spectral Solver for Variable Coefficient Elliptic Partial Differential Equations</i>,  
+             <b>NNB</b>, A. Gillman, and R. Hewett.  International Conference on Spectral and High Order Elements, London, UK (2018).</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span> 
+             <i> A parallel implementation of a high order accurate variable coefficient Helmholtz solver</i>,
+             <b>NNB</b>, A. Gillman, and R. Hewett.  SIAM Conference on Applied Linear Algebra, Hong Kong (2018).</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Poster</span> 
+            <i> A parallel implementation of a high order accurate variable coefficient Helmholtz solver</i>,
+             <b>NNB</b>, A. Gillman, and R. Hewett. Rice Oil & Gas HPC Conference, Houston, TX, USA (2018).</li>
+         </ul>
+      </div>
+
+    <br><br>   
+    <div class="container">
+     <div class="row">
+        <div class="col-md-7">
+          <h5><div class="alert alert-secondary" role="alert">FE-IE for interface problems & irregular domains</div></h5>
+           <p> 
+               We developed and implemented a new, high order finite element-integral equation coupling method for 
+               elliptic interface problems. The method leverages the strengths of FE and IE 
+               methods to handle different aspects of the problem. It can handle general jump conditions at the interface, 
+               and the jump conditions appear <i>only</i> in the right hand side of the system to be solved.
+               Additionally, method does not suffer from loss of convergence order near the boundary when the boundary is smooth
+               and the problem data can be extended as necessary across the interface. 
+               It also doesn't require the construction or use of any special basis functions; in fact,
+               much of the standard machinery for both the FE and IE solvers can be used, simplifying implementation 
+               from a software standpoint.  </p> 
+        </div>
+         <div class="col-md-4">
+          <figure class="figure">
+          <img src="files/starfish-jump.png" class="figure-img img-fluid rounded" alt="An interface problem on a starfish-shaped domain.">
+          <figcaption class="figure-caption">An example interface problem with jump conditions along a starfish-shaped interface.</figcaption>
+          </figure>
+         </div> 
+       </div>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>  
+              <i>High-order Finite Element—Integral Equation Coupling on Embedded Meshes,</i>
+              <b>NNB</b>, A. Kl&ouml;ckner, and L. N. Olson. Journal of Computational Physics 375 (2018).
+                &nbsp&nbsp[<a href="https://doi.org/10.1016/j.jcp.2018.08.032">journal link</a>]&nbsp&nbsp[<a href="https://arxiv.org/abs/1804.02736">arXiv link</a>]</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span> 
+             <i>Targeting Interface Problems at Scale with Coupled Elliptic Solvers</i>,
+             <b>NNB</b>, A. Kl&ouml;ckner, and L. N. Olson. 6th Joint Laboratory for Extreme-Scale Computing Workshop, Kobe, Japan (2016).</li>
+         </ul>
+      </div>
+
+
+    <br><br>   
+    <div class="container">
+     <div class="row">
+        <div class="col-md-6">
+          <h5><div class="alert alert-secondary" role="alert">FE-based P3M</div></h5>
+ 
+            <p> The goal of this project was to create an FE-based version of the particle-particle&ndash;particle-mesh (P3M)
+               methods for N-body problems.  P3M methods separate particle interactions into short-range (only required for near neighbors)
+               and far-field (smooth, and solved easily on a mesh with your favorite numerical method). A common choice is to achieve the P-P/P-M 
+splitting through Gaussian screen functions (as in the classic Ewald sum) and solve the mesh problem with FFTs.</p>
+
+           <p> We developed a method which constructs special polynomial screen functions out of finite element basis functions.  
+               Thus the screens are represented exactly on the finite element mesh, removing several possible sources of error 
+              in a finite element solution to the mesh problem.  Indeed, we aimed to make the mesh problem especially suited to
+               being solved with finite elements, avoiding the geometry restrictions and parallel communication burdens of the FFT. </p> 
+        </div>
+         <div class="col-md-5">
+          <figure class="figure">
+          <img src="files/screenfig.png" class="figure-img img-fluid rounded" alt="Example polynomial screens.">
+          <figcaption class="figure-caption">Polynomial screens formed from increasing order of basis functions for a charge located at the starred location.</figcaption>
+          </figure>
+         </div> 
+       </div>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>
+            <i>A Finite Element Based P3M Method for N-body Problems</i>,
+            <b>NNB</b>, L. N. Olson, J. B. Freund. SIAM J. Sci. Comput., 38(3) (2016). &nbsp&nbsp
+           [<a href="http://dx.doi.org/10.1137/15M1014644">journal link</a>]&nbsp&nbsp[<a href="http://arxiv.org/abs/1503.08509">arXiv link (slightly older version)</a>]</li> 
+           <li class="list-group-item"><span class="badge badge-secondary">Poster</span> 
+            <i> A Method for N-Body problems based on Exact Finite Element Basis Screen Functions,</i>
+            <b>NNB</b>, L. N. Olson, and J. B. Freund. 
+               SIAM Conference on Computational Science and Engineering, Salt Lake City, UT, USA (2015). </li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span> 
+            <i> A Scalable Method for Cellular Blood Flow and Other N-body Systems</i>, 
+            <b>NNB</b>, L. N. Olson, and J. B. Freund.   University of Illinois at Urbana-Champaign Computational Science & Engineering
+               Annual Meeting (2013).   &nbsp&nbsp[<a href="https://www.youtube.com/watch?v=XibOIsZ8tfM">video</a>] </li>
+         </ul>
+      </div>
+
+
+    <br><br><br><br>   
+    <div class="container">
+          <h5><div class="alert alert-secondary" role="alert">Past projects</div></h5>
+
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>
+            <i>Ordered and chaotic flow of red blood cells flowing in a narrow tube</i>, 
+             <b>NNB</b> and J. B. Freund. 66th Annual Meeting of the American Physical Society Division of Fluid Dynamics, Pittsburgh, PA, USA
+              (2013). </li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>
+             <i>Stability of red cells flowing in narrow tubes</i>, <b>NNB</b> and J. B. Freund.
+               64th Annual Meeting of the American Physical Society Division of Fluid Dynamics, Baltimore, MD, USA (2011). </li>
+           <br>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>
+             <i>Program Visualization Tool for Educational Code Analysis</i>, <b>NNB</b>.
+               2010 Global Conference on Educational Robotics, Edwardsville, IL, USA (2010). &nbsp&nbsp [Do you like educational robotics?
+                Then you should check out the awesome
+                <a href="http://kipr.org">people</a> who run GCER and their <a href="http://www.botball.org/">Botball</a> program] </li>
+         </ul>
+     </div>
+
+
+    </div>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
