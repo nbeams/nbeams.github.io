@@ -53,6 +53,61 @@
 
     <div class="container mt-5">
      <div class="row">
+        <div class="col-md-8 mt-4">
+          <h5><div class="alert alert-secondary" role="alert">Enabling exascale finite element simluations</div></h5>
+            <p> After joining ICL in 2019, I worked on two projects within the Exascale Computing Project (ECP): <a href="https://ceed.exascaleproject.org/">CEED</a> and <a href="https://www.exascaleproject.org/research-project/clover/">CLOVER.</a> </p>
+            <p> For CEED, I primarily worked with the <a href="https://github.com/CEED/libCEED">libCEED</a> library, leading
+                 the effort to port the CUDA backends to HIP for AMD GPUs, as well as contributing to other GPU-related 
+                 developments in the library. For CLOVER, I improved and expanded the interface of the
+                 <a href="https://github.com/mfem/mfem">MFEM</a> finite element library to
+                 <a href="https://github.com/ginkgo-project/ginkgo">Ginkgo</a>, enabling a minimal-overhead framework for interoperability
+                 between Ginkgo's solvers and preconditioners and those included in MFEM, as well as MFEM's matrix-free operators. (The podcast
+                 episode listed below discusses this interface in more detail.)  I have also 
+                 worked with porting the <a href="https://icl.utk.edu/magma/">MAGMA</a> linear algebra library to SYCL for Intel GPUs.
+            <p> For both projects, I have been involved with efforts to investigate mixed-precision acceleration of simulations on GPUs. The
+                following list gives an overview of the kind of work I have been involved in through ECP. </p>
+        </div>
+         <div class="col-md-3 mt-4">
+          <figure class="text-center">
+          <img src="files/ECP-logo.png" style="max-width:90%;" class="figure-img img-fluid rounded" alt="ECP">
+          <img src="files/ceed-logo-256.png" style="max-width:55%;" class="figure-img img-fluid rounded" alt="CEED">
+          <img src="files/ginkgo-logo.png" class="figure-img img-fluid rounded" alt="Ginkgo">
+          </figure>
+         </div> 
+       </div>
+         <ul class="list-group list-group-flush">
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>  
+              <i>Three-precision algebraic multigrid on GPUs</i>, Y. M. Tsai, <b>NNB</b>, and H. Anzt. Future Generation Computer Systems 149 (20                  23).&nbsp&nbsp[<a href="https://doi.org/10.1016/j.future.2023.07.024">journal link</a>]</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>
+              <i>Mixed Precision Algebraic Multigrid on GPUs</i>, Y. M. Tsai, <b>NNB</b>, and H. Anzt. Parallel Processing and Applied 
+                 Mathematics: 14th International Conference, PPAM 2022, Revised Selected Papers, Part I (2023).&nbsp&nbsp
+                 [<a href="https://doi.org/10.1007/978-3-031-30442-2_9">journal link</a>] &nbsp<i>(winner of best workshops paper award)</i></li>
+           <li class="list-group-item"><span class="badge badge-secondary">Podcast</span> 
+              <i>Enabling Cross-Project Research to Strengthen Math Libraries for Scientific Simulations</i>, episode 95 of ECP's "Let's Talk Exascale" podcast (2022).&nbsp&nbsp[<a href="https://www.exascaleproject.org/enabling-cross-project-research-to-strengthen-math-libraries-for-scientific-simulations/">website link</a>]&nbsp&nbsp[<a href="https://podcasts.apple.com/us/podcast/episode-95-enabling-cross-project-research-to-strengthen/id1336112335?i=1000559588834">Apple podcasts link</a>]</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>
+              <i>Leveraging Mixed Precision to Accelerate High-Order Finite Element Methods on GPUs</i>, <b>NNB</b>, J. Brown, J. Thompson,
+                 Y. Dudouit, and W. Pazner. SIAM Conference on Parallel Processing for Scientific Computing (PP) (2022).</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>
+              <i> libCEED: Fast algebra for high-order element-based discretizations</i>, J. Brown, A. Abdelfattah, V. Barra, <b>NNB</b>,
+                 J-S. Camier, V. Dobrev, Y. Dudouit, L. Ghaffari, T. Kolev, D. Medina, W. Pazner, T. Ratnayaka, J. Thompson, and S. Tomov. 
+                 Journal of Open Source Software 6(63) (2021).&nbsp&nbsp[<a href="https://doi.org/10.21105/joss.02945">journal link</a>]</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span> 
+              <i>MAGMA Backend and its Portability in Accelerating LibCEED using Standard and Device-Level Batched BLAS</i>, <b>NNB</b>, 
+                A. Abdelfattah, S. Tomov, and J. Dongarra. SIAM Conference on Computational Science and Engineering (CSE) (2021).</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Paper</span>
+              <i>High-Order Finite Element Method using Standard and Device-Level Batch GEMM on GPUs</i>, <b>NNB</b>, 
+                 A. Abdelfattah, S. Tomov, J. Dongarra, T. Kolev, and Y. Dudouit. IEEE/ACM 11th Workshop on Latest Advances in 
+                 Scalable Algorithms for Large-Scale Systems (ScalA) (2020).&nbsp&nbsp
+                 [<a href="https://doi.org/10.1109/ScalA51936.2020.00012">journal link</a>]&nbsp&nbsp[<a href="https://icl.utk.edu/files/publications/2020/icl-utk-1442-2020.pdf">UTK PDF link</a>]</li>
+           <li class="list-group-item"><span class="badge badge-secondary">Presentation</span>
+              <i>Coupling MFEM with Ginkgo for efficient preconditioning on GPUs</i>, <b>NNB</b>, T. Kolev, W. Pazner, H. Anzt, T. Grützmacher,
+                P. Nayak, and T. Ribizel. CEED 4th Annual Meeting (2020).</li>
+         </ul>
+      </div>
+
+    <br><br>   
+    <div class="container mt-5">
+     <div class="row">
         <div class="col-md-7 mt-4">
           <h5><div class="alert alert-secondary" role="alert">HPC for HPS</div></h5>
             <p> Work with my postdoc advisor, Adrianna Gillman.</p>
