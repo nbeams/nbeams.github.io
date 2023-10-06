@@ -55,7 +55,7 @@
      <div class="row">
         <div class="col-md-8 mt-4">
           <h5><div class="alert alert-secondary" role="alert">Enabling exascale finite element simluations</div></h5>
-            <p> After joining ICL in 2019, I worked on two projects within the Exascale Computing Project (ECP): <a href="https://ceed.exascaleproject.org/">CEED</a> and <a href="https://www.exascaleproject.org/research-project/clover/">CLOVER.</a> </p>
+            <p> After joining ICL in 2019, I have worked on two projects within the Exascale Computing Project (ECP): <a href="https://ceed.exascaleproject.org/">CEED</a> and <a href="https://www.exascaleproject.org/research-project/clover/">CLOVER.</a> </p>
             <p> For CEED, I primarily worked with the <a href="https://github.com/CEED/libCEED">libCEED</a> library, leading
                  the effort to port the CUDA backends to HIP for AMD GPUs, as well as contributing to other GPU-related 
                  developments in the library. For CLOVER, I improved and expanded the interface of the
@@ -118,8 +118,8 @@
                  fast direct solver is built from hierarchically merging Poincar&eacute;-Steklov
                  operators on box boundaries and storing the necessary information; the solve stage then involves
                  applying the operators  in a series of small matrix-vector multiplications.</p>
-           <p> We are working on parallelizing, optimizing, and accelerating the algorithm, especially the build stage.
-                This will be crucial in 3D.  Our 2D shared memory parallelization technique has already reduced the build stage times from 
+           <p> We worked on parallelizing, optimizing, and accelerating the algorithm, especially the build stage.
+                 Our 2D shared memory parallelization technique has already reduced the build stage times from
                  approximately 10 minutes to approximately 30 seconds for over 3 million unknowns. </p>
         </div>
          <div class="col-md-4 mt-4">
@@ -158,7 +158,7 @@
                elliptic interface problems. The method leverages the strengths of FE and IE 
                methods to handle different aspects of the problem. It can handle general jump conditions at the interface, 
                and the jump conditions appear <i>only</i> in the right hand side of the system to be solved.
-               Additionally, method does not suffer from loss of convergence order near the boundary when the boundary is smooth
+               Additionally, the method does not suffer from loss of convergence order near the boundary when the boundary is smooth
                and the problem data can be extended as necessary across the interface. 
                It also doesn't require the construction or use of any special basis functions; in fact,
                much of the standard machinery for both the FE and IE solvers can be used, simplifying implementation 
